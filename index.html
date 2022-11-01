@@ -12,30 +12,6 @@
     <button class="botao" id="02">oi</button>
     <div id="timer"></div>
     
-<script>
-    document.getElementById("02").onclick = function() {
-        document.getElementById("02").style.display = "none";
-        var duration = 6; // Converter para segundos
-        display = document.querySelector('#timer'); // selecionando o timer
-        startTimer(duration, display); // iniciando o timer
-    }
-    function startTimer(duration, display) {
-        var timer = duration, minutes, seconds;
-        setInterval(function () {
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-            display.textContent = minutes + ":" + seconds;
-            if (timer < 1) {
-            display.textContent = "";
-            document.getElementById("02").style.display = "block";
-            }
-            else{
-            --timer;
-            }
-        }, 1000);
-    }
-    </script>
+<script src="game.js"> </script>
 </body>
 </html>
