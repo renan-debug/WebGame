@@ -1,6 +1,7 @@
 let mensagem = document.querySelector(".mensagem") ;
-//var crow = document.getElementById("crow").addEventListener("mouseover", showMessage)
-//document.getElementById("#crowleymini").addEventListener("mouseover", mostra);
+let crow = document.getElementById("2");
+let crow3 = document.getElementById("3");
+
 
 function showMessage(){   
    mensagem.style.display = "block"; 
@@ -8,15 +9,20 @@ function showMessage(){
  }
 function hideMessage(){
  mensagem.style.display = "none"; 
- //document.getElementById("haddit").innerHTML = "Had! A manifestação de Nuit.";
 }
 
-function mostra(){
-    document.write("Had! A manifestação de Nuit");
-    document.getElementById("divHi").style.display = "block";
+function mostra(){   
+  crow.style.display = "block"; 
+  
+}
+function apaga(){
+crow.style.display = "none"; 
 }
 
-function mostraMensagem(){
-  document.getElementById("divHi").style.display = "block";
-
+function mostra3(){   
+  crow3.style.display = "block"; 
+  
+}
+function apaga3(){
+crow3.style.display = "none"; 
 }
