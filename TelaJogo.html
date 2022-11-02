@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+	font-family:Verdana, sans-serif;
+}
+#topoDiv {
+  width: 1200px;
+  height: 60px;
+  position: fixed;
+}
+	.textoTopo {
+	}
+	#nomeLugarTDiv {
+	  width: 198px;
+	  height: 60px;
+	  position: fixed;
+	  margin-left: 1px;
+	  margin-right: 1px;
+	}
+		#textoNomeLugarTDiv {
+			transform: translate(20%,-10%);
+			font-size: 25px;
+		}
+	#descricaoLugarTDiv {
+	  width: 798px;
+	  height: 60px;
+	  position: fixed;
+	  margin-left: 201px;
+	  margin-right: 1px;
+	}
+		#textoDescricaoLugarTDiv {
+			transform: translate(5%,100%);
+			font-size: 15px;
+		}
+	#tempoDeVidaTDiv {
+	  width: 198px;
+	  height: 60px;
+	  position: fixed;
+	  margin-left: 1001px;
+	  margin-right: 1px;
+	}
+		#textoTempoDeVidaTDiv {
+			text-align: center;
+			font-size: 25px;
+		}
+#titulosTabelasDiv {
+  width: 1000px;
+  height: 30px;
+  position: fixed;
+  margin-top: 62px;
+}
+	.textoTitulosTabelas {
+		font-size: 11px;
+	}
+	#areaTTDiv {
+	  width: 248px;
+	  height: 30px;
+	  position: fixed;
+	  background-color: #eaeaea;
+	  margin-left: 1px;
+	  margin-right: 1px;
+	}
+	#acoesRapidasTTDiv {
+	  width: 248px;
+	  height: 30px;
+	  position: fixed;
+	  background-color: #eaeaea;
+	  margin-left: 251px;
+	  margin-right: 1px;
+	}
+	#acoesLoopTTDiv {
+	  width: 248px;
+	  height: 30px;
+	  position: fixed;
+	  background-color: #eaeaea;
+	  margin-left: 501px;
+	  margin-right: 1px;
+	}
+	#npcsTTDiv {
+	  width: 248px;
+	  height: 30px;
+	  position: fixed;
+	  background-color: #eaeaea;
+	  margin-left: 751px;
+	  margin-right: 1px;
+	}
+#principalDiv {
+  width: 1000px;
+  height: 368px;
+  position: fixed;
+  margin-top: 94px;
+}
+	.botaoArea {
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 5px;
+		background-color: white;
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+		.textBotoesArea {
+			margin-top: 0px;
+			margin-bottom: 0px;
+			text-align: center;
+		}
+	.divListaBotoes {
+		border-style: solid;
+		border-width: 1px;
+		background-color: white;
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+	.redutorListaBotoes {
+		display: block;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		font-style: italic;
+	}
+	.botaoPrincipalDiv {
+		border-style: solid;
+		border-width: 1px;
+		display: block;
+		margin-top: 1px;
+		margin-bottom: 1px;
+		text-align: center;
+	}
+	#opcoesAreaPDiv {
+	  width: 248px;
+	  height: 368px;
+	  position: fixed;
+	  background-color: #eaeaea;
+	  margin-left: 1px;
+	  margin-right: 1px;
+	}
+	#opcoesAcoesRapidasPDiv {
+	  width: 248px;
+	  height: 368px;
+	  position: fixed;
+	  background-color: #eaeaea;
+	  margin-left: 251px;
+	  margin-right: 1px;
+	}
+	#opcoesAcoesLoopPDiv {
+	  width: 248px;
+	  height: 368px;
+	  position: fixed;
+	  background-color: #eaeaea;
+	  margin-left: 501px;
+	  margin-right: 1px;
+	}
+	#opcoesNpcsPDiv {
+	  width: 248px;
+	  height: 368px;
+	  position: fixed;
+	  background-color: #eaeaea;
+	  margin-left: 751px;
+	  margin-right: 1px;
+	}	
+#tabelasPontosDiv {
+  width: 198px;
+  height: 400px;
+  position: fixed;
+  margin-top: 62px;
+  margin-left: 1002px;
+  font-size:12px;
+}
+	.divListaTabelaPontos {
+		border-style: solid;
+		border-width: 1px;
+		background-color: #f5f5f5;
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+	.redutorTabelaPontos {
+		display: block;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		font-weight: bold;
+	}
+	.divItemTabelaPontos{
+	}
+	.divNomeItemTabelaPontos{
+	width: 48.92%;
+	display: inline-block;
+	}
+	.divNumerosItemTabelaPontos{
+	width: 48.92%;
+	display: inline-block;
+	text-align:right;
+	}
+</style>
+<body>
+
+<div id="topoDiv">
+	<div id="nomeLugarTDiv"><p class="textoTopo" id="textoNomeLugarTDiv">Aldeia</p></div>
+	<div id="descricaoLugarTDiv"><p class="textoTopo" id="textoDescricaoLugarTDiv">Pequena aldeia habitada por duas famílias.</p></div>
+	<div id="tempoDeVidaTDiv"><p class="textoTopo" id="textoTempoDeVidaTDiv">05:00</p></div>
+</div>
+<div id="titulosTabelasDiv">
+	<div id="areaTTDiv"><p class="textoTitulosTabelas">Área</p></div>
+	<div id="acoesRapidasTTDiv"><p class="textoTitulosTabelas">Ações Rápidas</p></div>
+	<div id="acoesLoopTTDiv"><p class="textoTitulosTabelas">Ações em Loop</p></div>
+	<div id="npcsTTDiv"><p class="textoTitulosTabelas">NPCs</p></div>
+</div>
+<div id="principalDiv">
+	<div id="opcoesAreaPDiv">
+		<div class="botaoArea" id="botaoAldeia">
+		<p class="textBotoesArea">Aldeia</p>
+		</div>
+	</div>
+	<div id="opcoesAcoesRapidasPDiv">
+		<div class="divListaBotoes" id="rapidaAtividade">
+			<p class ="redutorListaBotoes" id="redutorRapidaAtividade">▼Atividade</p>
+			<div id="botoesAtividade">
+				<p class="botaoPrincipalDiv" id="opcoesColherMaca">Colher Maça</p>
+			</div>
+		</div>
+		<div class="divListaBotoes" id="rapidoSocial">
+			<p class ="redutorListaBotoes" id="redutorRapidoSocial">▼Social</p>
+			<div id="botoesSocial">
+				<p class="botaoPrincipalDiv" id="opcoesCausarIntriga">Causar Intriga</p>
+			</div>
+		</div>
+	</div>
+	<div id="opcoesAcoesLoopPDiv">
+		<div class="divListaBotoes" id="loopTrabalho">
+			<p class ="redutorListaBotoes" id="redutorLoopTrabalho">▼Trabalho</p>
+			<div id="botoesTrabalho">
+				<p class="botaoPrincipalDiv" id="loopTrabalhoNoCampo">Campo</p>
+			</div>
+		</div>
+		<div class="divListaBotoes" id="loopRestaurador">
+			<p class ="redutorListaBotoes" id="redutorLoopRestaurador">▼Restaurador</p>
+			<div id="botoesRestaurador">
+				<p class="botaoPrincipalDiv" id="loopComer">Comer</p>
+			</div>
+		</div>
+	</div>
+	<div id="opcoesNpcsPDiv">
+		<div class="divListaBotoes" id="areaNpcFazenda">
+			<p class ="redutorListaBotoes" id="redutorNpcFazenda">▼Fazenda</p>
+			<div id="botoesFazenda">
+				<p class="botaoPrincipalDiv" id="npcFazendeiro">Fazendeiro</p>
+				<p class="botaoPrincipalDiv" id="npcMoca">Moça</p>
+			</div>
+		</div>
+		<div class="divListaBotoes" id="areaNpcCentro">
+			<p class ="redutorListaBotoes" id="redutorNpcCentro">▼Centro</p>
+			<div id="botoesCentro">
+			<p class="botaoPrincipalDiv" id="npcSenhoraIdosa">Senhora Idosa</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="tabelasPontosDiv">
+	<div class="divListaTabelaPontos" id="ferramentasTPDiv">
+		<p class ="redutorTabelaPontos" id="redutorTPontosFerramentas">▼Ferramentas</p>
+		<div id="infosFerramentas">
+			<div class="divItemTabelaPontos" id="divCestoTabelaPontos">
+				<div class ="divNomeItemTabelaPontos">Cesto</div>
+				<div class ="divNumerosItemTabelaPontos">3000/5000</div>
+			</div>
+			<div class="divItemTabelaPontos" id="divLancaTabelaPontos">
+				<div class ="divNomeItemTabelaPontos">Lança</div>
+				<div class ="divNumerosItemTabelaPontos">23/78</div>
+			</div>
+			<div class="divItemTabelaPontos" id="divEnxadaTabelaPontos">
+				<div class ="divNomeItemTabelaPontos">Enxada</div>
+				<div class ="divNumerosItemTabelaPontos">0/0</div>
+			</div>
+		</div>
+	</div>
+	<div class="divListaTabelaPontos" id="itensTPDiv">
+		<p class ="redutorTabelaPontos" id="redutorTPontosItens">▼Itens</p>
+		<div id="infosItens">
+			<div class="divItemTabelaPontos" id="divMacaTabelaPontos">
+				<div class ="divNomeItemTabelaPontos">Maças</div>
+				<div class ="divNumerosItemTabelaPontos">0/0</div>
+			</div>
+			<div class="divItemTabelaPontos" id="divComidaTabelaPontos">
+				<div class ="divNomeItemTabelaPontos">Comida</div>
+				<div class ="divNumerosItemTabelaPontos">0/0</div>
+			</div>
+		</div>
+	</div>
+	<div class="divListaTabelaPontos" id="respeitoTPDiv">
+		<p class ="redutorTabelaPontos" id="redutorTPontosRespeito">▼Respeito</p>
+		<div id="infosRespeito">
+			<div class="divItemTabelaPontos" id="divGeralTabelaPontos">
+				<div class ="divNomeItemTabelaPontos">Geral</div>
+				<div class ="divNumerosItemTabelaPontos">0/0</div>
+			</div>
+			<div class="divItemTabelaPontos" id="divFazendeiroTabelaPontos">
+				<div class ="divNomeItemTabelaPontos">Fazendeiro</div>
+				<div class ="divNumerosItemTabelaPontos">0/0</div>
+			</div>
+			<div class="divItemTabelaPontos" id="divMocaTabelaPontos">
+				<div class ="divNomeItemTabelaPontos">Moça</div>
+				<div class ="divNumerosItemTabelaPontos">0/0</div>
+			</div>
+			<div class="divItemTabelaPontos" id="divSenhoraIdosaTabelaPontos">
+				<div class ="divNomeItemTabelaPontos">Senhora Idosa</div>
+				<div class ="divNumerosItemTabelaPontos">0/0</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+var reduzido = [];
+document.getElementById("redutorRapidaAtividade").onclick = function() {interruptorBotao('botoesAtividade',0)};
+document.getElementById("redutorRapidoSocial").onclick = function() {interruptorBotao('botoesSocial',1)};
+document.getElementById("redutorLoopTrabalho").onclick = function() {interruptorBotao('botoesTrabalho',2)};
+document.getElementById("redutorLoopRestaurador").onclick = function() {interruptorBotao('botoesRestaurador',3)};
+document.getElementById("redutorNpcFazenda").onclick = function() {interruptorBotao('botoesFazenda',4)};
+document.getElementById("redutorNpcCentro").onclick = function() {interruptorBotao('botoesCentro',5)};
+document.getElementById("redutorTPontosFerramentas").onclick = function() {interruptorBotao('infosFerramentas',6)};
+document.getElementById("redutorTPontosItens").onclick = function() {interruptorBotao('infosItens',7)};
+document.getElementById("redutorTPontosRespeito").onclick = function() {interruptorBotao('infosRespeito',8)};
+
+function interruptorBotao(grupoNpcs,indiceReduzido) {
+    if (!reduzido[indiceReduzido]) {
+        document.getElementById(grupoNpcs).style.display = "none";
+        reduzido[indiceReduzido] = 1;
+        
+    }else{
+        document.getElementById(grupoNpcs).style.display = "block";
+        reduzido[indiceReduzido] = 0;
+    }
+}
+</script>
+</body>
+</html>
