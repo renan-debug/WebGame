@@ -6,6 +6,7 @@ let crow3 = document.getElementById("3");
 function showMessage(){   
    //mensagem.style.display = "block";
    mensagem.innerHTML ="Had! A manifestação de Nuit.";
+   mensagem.style.visibility ="visible";
    
  }
 function hideMessage(){
@@ -16,6 +17,7 @@ function hideMessage(){
 function mostra(){   
   //crow.style.display = "block"; 
    mensagem.innerHTML ="O desvelar da companhia do céu.";
+   mensagem.style.visibility ="visible";
   
 }
 function apaga(){
@@ -27,6 +29,7 @@ mensagem.style.visibility ="hidden";
 function mostra3(){   
   //crow3.style.display = "block"; 
    mensagem.innerHTML ="Todo Homem e toda mulher é uma estrela";
+   mensagem.style.visibility ="visible";
   
 }
 function apaga3(){
