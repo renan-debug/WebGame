@@ -214,7 +214,7 @@ body{
 		<div class="divListaBotoes" id="rapidaAtividade">
 			<p class ="redutorListaBotoes" id="redutorRapidaAtividade">▼Atividade</p>
 			<div id="botoesAtividade">
-				<p class="botaoPrincipalDiv" id="rapidoColherMaca">Colher Maça</p>
+				<p class="botaoPrincipalDiv" id="rapidoColherMaca" onclick="conta()">Colher Maça</p>
 			</div>
 		</div>
 		<div class="divListaBotoes" id="rapidoSocial">
@@ -277,7 +277,7 @@ body{
 		<div id="infosItens">
 			<div class="divItemTabelaPontos" id="divMacaTabelaPontos">
 				<div class ="divNomeItemTabelaPontos">Maças</div>
-				<div class ="divNumerosItemTabelaPontos">0/0</div>
+				<div class ="divNumerosItemTabelaPontos"><span id="maca_cont">0</span>/0</div>
 			</div>
 			<div class="divItemTabelaPontos" id="divComidaTabelaPontos">
 				<div class ="divNomeItemTabelaPontos">Comida</div>
@@ -351,6 +351,16 @@ function mouseEntraSaiBotao(idBotao,entraSai) {
 	}else{
 		document.getElementById(idBotao).style.background = "white";
 	}
+}
+
+//contador da maçã
+var cont = 0;
+let disp = document.getElementById("maca_cont");
+
+function conta(){
+   cont++;
+   disp.innerHTML = cont;
+
 }
 
 </script>

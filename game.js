@@ -3,6 +3,7 @@ let crow = document.getElementById("2");
 let crow3 = document.getElementById("3");
 
 
+
 function showMessage(){   
    //mensagem.style.display = "block";
    mensagem.innerHTML ="Had! A manifestação de Nuit.";
@@ -35,4 +36,15 @@ function mostra3(){
 function apaga3(){
 //crow3.style.display = "none"; 
    mensagem.style.visibility ="hidden";
+}
+
+
+//contador da maçã
+var cont = 0;
+let disp = document.getElementById("cont_maca");
+
+function conta(){
+   cont++;
+   disp.innerHTML = cont;
+
 }
