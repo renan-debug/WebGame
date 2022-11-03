@@ -10,7 +10,7 @@ function showMessage(){
  }
 function hideMessage(){
  //mensagem.style.display = "none";
-   mensagem.innerHTML ="";
+   mensagem.style.visibility ="hidden";
 }
 
 function mostra(){   
@@ -20,7 +20,8 @@ function mostra(){
 }
 function apaga(){
 //crow.style.display = "none"; 
-   mensagem.innerHTML ="";
+mensagem.style.visibility ="hidden";
+
 }
 
 function mostra3(){   
@@ -30,5 +31,5 @@ function mostra3(){
 }
 function apaga3(){
 //crow3.style.display = "none"; 
-   mensagem.innerHTML ="";
+   mensagem.style.visibility ="hidden";
 }
