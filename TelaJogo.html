@@ -3,6 +3,7 @@
 <style>
 body{
 	font-family:Verdana, sans-serif;
+	cursor: default;
 }
 #topoDiv {
   width: 1200px;
@@ -213,13 +214,13 @@ body{
 		<div class="divListaBotoes" id="rapidaAtividade">
 			<p class ="redutorListaBotoes" id="redutorRapidaAtividade">▼Atividade</p>
 			<div id="botoesAtividade">
-				<p class="botaoPrincipalDiv" id="opcoesColherMaca">Colher Maça</p>
+				<p class="botaoPrincipalDiv" id="rapidoColherMaca">Colher Maça</p>
 			</div>
 		</div>
 		<div class="divListaBotoes" id="rapidoSocial">
 			<p class ="redutorListaBotoes" id="redutorRapidoSocial">▼Social</p>
 			<div id="botoesSocial">
-				<p class="botaoPrincipalDiv" id="opcoesCausarIntriga">Causar Intriga</p>
+				<p class="botaoPrincipalDiv" id="rapidoCausarIntriga">Causar Intriga</p>
 			</div>
 		</div>
 	</div>
@@ -318,6 +319,22 @@ document.getElementById("redutorTPontosFerramentas").onclick = function() {inter
 document.getElementById("redutorTPontosItens").onclick = function() {interruptorBotao('infosItens',7)};
 document.getElementById("redutorTPontosRespeito").onclick = function() {interruptorBotao('infosRespeito',8)};
 
+var idBotao = ["rapidoColherMaca","rapidoCausarIntriga","loopTrabalhoNoCampo","loopComer","npcFazendeiro","npcMoca","npcSenhoraIdosa"];
+document.getElementById(idBotao[0]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[0],0)};
+document.getElementById(idBotao[0]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[0],1)};
+document.getElementById(idBotao[1]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[1],0)};
+document.getElementById(idBotao[1]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[1],1)};
+document.getElementById(idBotao[2]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[2],0)};
+document.getElementById(idBotao[2]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[2],1)};
+document.getElementById(idBotao[3]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[3],0)};
+document.getElementById(idBotao[3]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[3],1)};
+document.getElementById(idBotao[4]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[4],0)};
+document.getElementById(idBotao[4]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[4],1)};
+document.getElementById(idBotao[5]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[5],0)};
+document.getElementById(idBotao[5]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[5],1)};
+document.getElementById(idBotao[6]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[6],0)};
+document.getElementById(idBotao[6]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[6],1)};
+
 function interruptorBotao(grupoNpcs,indiceReduzido) {
     if (!reduzido[indiceReduzido]) {
         document.getElementById(grupoNpcs).style.display = "none";
@@ -328,6 +345,14 @@ function interruptorBotao(grupoNpcs,indiceReduzido) {
         reduzido[indiceReduzido] = 0;
     }
 }
+function mouseEntraSaiBotao(idBotao,entraSai) {
+	if(!entraSai){
+		document.getElementById(idBotao).style.background = "#eaeaea";
+	}else{
+		document.getElementById(idBotao).style.background = "white";
+	}
+}
+
 </script>
 </body>
 </html>
