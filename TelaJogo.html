@@ -220,7 +220,7 @@ body{
 		<div class="divListaBotoes" id="rapidoSocial">
 			<p class ="redutorListaBotoes" id="redutorRapidoSocial">▼Social</p>
 			<div id="botoesSocial">
-				<p class="botaoPrincipalDiv" id="rapidoCausarIntriga" onclick="contaMenos('geral_cont', 10)">Causar Intriga</p>
+				<p class="botaoPrincipalDiv" id="rapidoCausarIntriga" onclick="contaMenos('geral_cont')">Causar Intriga</p>
 			</div>
 		</div>
 	</div>
@@ -354,8 +354,8 @@ function mouseEntraSaiBotao(idBotao,entraSai) {
 }
 
 //contador da maçã
-var cont = 0;
 
+var cont = 0;
 function conta(itemASerContado, iten_max){
 	if(cont < iten_max){
 	cont++;
@@ -363,11 +363,12 @@ function conta(itemASerContado, iten_max){
 	};
 };
 
-function contaMenos(itemASerContado, iten_max){
-	if(cont < iten_max){
-	cont--;
-	document.getElementById(itemASerContado).innerHTML = cont;
-	};
+//contador do geral, que é para menos
+disp=0;
+function contaMenos(itemASerContado){
+	disp--;
+	document.getElementById(itemASerContado).innerHTML = disp;
+	
 };
 
 </script>
