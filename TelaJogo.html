@@ -214,13 +214,13 @@ body{
 		<div class="divListaBotoes" id="rapidaAtividade">
 			<p class ="redutorListaBotoes" id="redutorRapidaAtividade">▼Atividade</p>
 			<div id="botoesAtividade">
-				<p class="botaoPrincipalDiv" id="rapidoColherMaca" onclick="conta()">Colher Maça</p>
+				<p class="botaoPrincipalDiv" id="rapidoColherMaca" onclick="conta('maca_cont', 10)">Colher Maça</p>
 			</div>
 		</div>
 		<div class="divListaBotoes" id="rapidoSocial">
 			<p class ="redutorListaBotoes" id="redutorRapidoSocial">▼Social</p>
 			<div id="botoesSocial">
-				<p class="botaoPrincipalDiv" id="rapidoCausarIntriga">Causar Intriga</p>
+				<p class="botaoPrincipalDiv" id="rapidoCausarIntriga" onclick="contaMenos('geral_cont', 10)">Causar Intriga</p>
 			</div>
 		</div>
 	</div>
@@ -260,15 +260,15 @@ body{
 		<div id="infosFerramentas">
 			<div class="divItemTabelaPontos" id="divCestoTabelaPontos">
 				<div class ="divNomeItemTabelaPontos">Cesto</div>
-				<div class ="divNumerosItemTabelaPontos">3000/5000</div>
+				<div class ="divNumerosItemTabelaPontos"><span id="cesto_cont">3000</span>/<span id="maca_max">5000</span></div>
 			</div>
 			<div class="divItemTabelaPontos" id="divLancaTabelaPontos">
 				<div class ="divNomeItemTabelaPontos">Lança</div>
-				<div class ="divNumerosItemTabelaPontos">23/78</div>
+				<div class ="divNumerosItemTabelaPontos"><span id="lanca_cont">23</span>/<span id="lanca_max">78</span></div>
 			</div>
 			<div class="divItemTabelaPontos" id="divEnxadaTabelaPontos">
 				<div class ="divNomeItemTabelaPontos">Enxada</div>
-				<div class ="divNumerosItemTabelaPontos">0/0</div>
+				<div class ="divNumerosItemTabelaPontos"><span id="enxada_cont">0</span>/<span id="enxada_max">0</span></div>
 			</div>
 		</div>
 	</div>
@@ -277,11 +277,11 @@ body{
 		<div id="infosItens">
 			<div class="divItemTabelaPontos" id="divMacaTabelaPontos">
 				<div class ="divNomeItemTabelaPontos">Maças</div>
-				<div class ="divNumerosItemTabelaPontos"><span id="maca_cont">0</span>/0</div>
+				<div class ="divNumerosItemTabelaPontos"><span id="maca_cont">0</span>/<span id="maca_max">0</span></div>
 			</div>
 			<div class="divItemTabelaPontos" id="divComidaTabelaPontos">
 				<div class ="divNomeItemTabelaPontos">Comida</div>
-				<div class ="divNumerosItemTabelaPontos">0/0</div>
+				<div class ="divNumerosItemTabelaPontos"><span id="comida_cont">0</span>/<span id="comida_max">0</span></div>
 			</div>
 		</div>
 	</div>
@@ -290,19 +290,19 @@ body{
 		<div id="infosRespeito">
 			<div class="divItemTabelaPontos" id="divGeralTabelaPontos">
 				<div class ="divNomeItemTabelaPontos">Geral</div>
-				<div class ="divNumerosItemTabelaPontos">0/0</div>
+				<div class ="divNumerosItemTabelaPontos"><span id="geral_cont">0</span>/<span id="geral_max">0</span></div>
 			</div>
 			<div class="divItemTabelaPontos" id="divFazendeiroTabelaPontos">
 				<div class ="divNomeItemTabelaPontos">Fazendeiro</div>
-				<div class ="divNumerosItemTabelaPontos">0/0</div>
+				<div class ="divNumerosItemTabelaPontos"><span id="fazendeiro_cont">0</span>/<span id="fazendeiro_max">0</span></div>
 			</div>
 			<div class="divItemTabelaPontos" id="divMocaTabelaPontos">
 				<div class ="divNomeItemTabelaPontos">Moça</div>
-				<div class ="divNumerosItemTabelaPontos">0/0</div>
+				<div class ="divNumerosItemTabelaPontos"><span id="moca_cont">0</span>/<span id="moca_max">0</span></div>
 			</div>
 			<div class="divItemTabelaPontos" id="divSenhoraIdosaTabelaPontos">
 				<div class ="divNomeItemTabelaPontos">Senhora Idosa</div>
-				<div class ="divNumerosItemTabelaPontos">0/0</div>
+				<div class ="divNumerosItemTabelaPontos"><span id="sra_cont">0</span>/<span id="sra_max">0</span></div>
 			</div>
 		</div>
 	</div>
@@ -355,13 +355,20 @@ function mouseEntraSaiBotao(idBotao,entraSai) {
 
 //contador da maçã
 var cont = 0;
-let disp = document.getElementById("maca_cont");
 
-function conta(){
-   cont++;
-   disp.innerHTML = cont;
+function conta(itemASerContado, iten_max){
+	if(cont < iten_max){
+	cont++;
+	document.getElementById(itemASerContado).innerHTML = cont;
+	};
+};
 
-}
+function contaMenos(itemASerContado, iten_max){
+	if(cont < iten_max){
+	cont--;
+	document.getElementById(itemASerContado).innerHTML = cont;
+	};
+};
 
 </script>
 </body>

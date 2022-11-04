@@ -41,10 +41,10 @@ function apaga3(){
 
 //contador da maçã
 var cont = 0;
-let disp = document.getElementById("cont_maca");
 
-function conta(){
+
+function conta(teste){
    cont++;
-   disp.innerHTML = cont;
+   document.getElementById(teste).innerHTML = cont;
 
 }
