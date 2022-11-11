@@ -190,6 +190,82 @@ body{
 	display: inline-block;
 	text-align:right;
 	}
+#inferiorDiv {
+  width: 1000px;
+  height: 100px;
+  position: fixed;
+  margin-top: 464px;
+}
+	#filaIDiv {
+	  width: 248px;
+	  height: 100px;
+	  position: fixed;
+	  margin-left: 1px;
+	  margin-right: 1px;
+	  background-color: #eaeaea;
+	  overflow: auto;
+	}
+		.numeroLinhaFila {
+			width: 26px;
+			display: inline-block;
+			color: white;
+			border-style:solid;
+			border-width: 0px 0px 2px 0px;
+			border-color: white;
+			background-color: #787878;
+		}
+		.textoLinhaFila {
+			width: 195px;
+			display: inline-block;
+			border-style:solid;
+			border-width: 0px 2px 2px 2px;
+			border-color: white;
+			text-align: center;
+		}
+	#DescricaoIDiv {
+	  width: 748px;
+	  height: 100px;
+	  position: fixed;
+	  margin-left: 251px;
+	  margin-right: 1px;
+	  background-color: #eaeaea;
+	  color: white;
+	  font-size: 12px;
+	}
+		#tituloDescricaoDIDiv {
+			width: 248px;
+			height: 100px;
+			position: fixed;
+			background-color: #787878;
+		}
+			#tituloDIDiv {
+			font-size: 14px;
+			font-weight: bold;
+			}
+		.custoDIDiv {
+			width: 164px;
+			height: 100px;
+			position: fixed;
+			background-color: #787878;
+			margin-left: 250px;
+		}
+		.efeitoDIDiv{
+			width: 164px;
+			height: 100px;
+			position: fixed;
+			background-color: #787878;
+			margin-left: 416px;
+		}
+		.futuroDIDiv{
+			width: 164px;
+			height: 100px;
+			position: fixed;
+			background-color: #787878;
+			margin-left: 582px;
+		}
+			.tituloCustoEfeitoFuturoDIDIV {
+			font-weight: bold;
+			}
 </style>
 <body>
 
@@ -207,7 +283,7 @@ body{
 <div id="principalDiv">
 	<div id="opcoesAreaPDiv">
 		<div class="botaoArea" id="botaoAldeia">
-		<p class="textBotoesArea">Aldeia</p>
+			<p class="textBotoesArea">Aldeia</p>
 		</div>
 	</div>
 	<div id="opcoesAcoesRapidasPDiv">
@@ -304,6 +380,69 @@ body{
 				<div class ="divNomeItemTabelaPontos">Senhora Idosa</div>
 				<div class ="divNumerosItemTabelaPontos"><span id="sra_cont">0</span>/<span id="sra_max">0</span></div>
 			</div>
+		</div>
+	</div>
+</div>
+<div id="inferiorDiv">
+	<div id="filaIDiv">
+		<div id="posicao1Fila">
+			<div class="numeroLinhaFila">01.</div>
+			<div class="textoLinhaFila">Comprar Feijoada</div>
+		</div>
+		<div id="posicao2Fila">
+			<div class="numeroLinhaFila">02.</div>
+			<div class="textoLinhaFila">Abençoar Traficantes</div>
+		</div>
+		<div id="posicao3Fila">
+			<div class="numeroLinhaFila">03.</div>
+			<div class="textoLinhaFila">Sabedoria Alienígena</div>
+		</div>
+		<div id="posicao4Fila">
+			<div class="numeroLinhaFila">04.</div>
+			<div class="textoLinhaFila">Dormir</div>
+		</div>
+		<div id="posicao5Fila">
+			<div class="numeroLinhaFila">05.</div>
+			<div class="textoLinhaFila">Ler</div>
+		</div>
+		<div id="posicao6Fila">
+			<div class="numeroLinhaFila">06.</div>
+			<div class="textoLinhaFila">Ouvir BackStreetBooks</div>
+		</div>
+		<div id="posicao7Fila">
+			<div class="numeroLinhaFila">07.</div>
+			<div class="textoLinhaFila">Taberu</div>
+		</div>
+		<div id="posicao8Fila">
+			<div class="numeroLinhaFila">08.</div>
+			<div class="textoLinhaFila">Miru</div>
+		</div>
+		<div id="posicao9Fila">
+			<div class="numeroLinhaFila">09.</div>
+			<div class="textoLinhaFila">Viver</div>
+		</div>
+	</div>
+	<div id="DescricaoIDiv">
+		<div id="tituloDescricaoDIDiv">
+			<div id="tituloDIDiv">Campo</div>
+			<div id="descricaoDIDiv">Era uma vez
+Um lugarzinho no meio do nada
+Com sabor de chocolate
+E cheiro de terra molhada
+Era uma vez
+A riqueza contra a simplicidade...</div>
+		</div>
+		<div class="custoDIDiv">
+			<div class="tituloCustoEfeitoFuturoDIDIV">Custo:</div>
+			<div class="textoCustoEfeitoFuturoDIDIV">-1 enxada (8/8)</div>
+		</div>
+		<div class="efeitoDIDiv">
+			<div class="tituloCustoEfeitoFuturoDIDIV">Efeito:</div>
+			<div class="textoCustoEfeitoFuturoDIDIV">+1 comida (0/0)</div>
+		</div>
+		<div class="futuroDIDiv">
+			<div class="tituloCustoEfeitoFuturoDIDIV">Futuro:</div>
+			<div class="textoCustoEfeitoFuturoDIDIV">+1 comida (0/0)</div>
 		</div>
 	</div>
 </div>
