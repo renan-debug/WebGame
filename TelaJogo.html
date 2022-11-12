@@ -44,7 +44,21 @@ body{
 		#textoTempoDeVidaTDiv {
 			text-align: center;
 			font-size: 25px;
+			animation-name: bordaparainterior;
+			animation-duration: 0.5s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
 		}
+			@keyframes bordaparainterior{
+				0% {
+					transform: scale(1.2,1.2);
+				}
+				100% {
+					color: black;
+					text-shadow: 0 0 black;
+					transform: scale(1,1);
+				}
+			}
 #titulosTabelasDiv {
   width: 1000px;
   height: 30px;
@@ -272,7 +286,7 @@ body{
 <div id="topoDiv">
 	<div id="nomeLugarTDiv"><p class="textoTopo" id="textoNomeLugarTDiv">Aldeia</p></div>
 	<div id="descricaoLugarTDiv"><p class="textoTopo" id="textoDescricaoLugarTDiv">Pequena aldeia habitada por duas famílias.</p></div>
-	<div id="tempoDeVidaTDiv"><p class="textoTopo" id="textoTempoDeVidaTDiv">05:00</p></div>
+	<div id="tempoDeVidaTDiv"><p class="textoTopo" id="textoTempoDeVidaTDiv">Jogar</p></div>
 </div>
 <div id="titulosTabelasDiv">
 	<div id="areaTTDiv"><p class="textoTitulosTabelas">Área</p></div>
@@ -331,6 +345,19 @@ body{
 	</div>
 </div>
 <div id="tabelasPontosDiv">
+	<div class="divListaTabelaPontos" id="tituloTPDiv1">
+		<p class ="redutorTabelaPontos" id="redutorTPontosTitulo1">▼Tempo</p>
+		<div id="infosTitulo1">
+			<div class="divItemTabelaPontos" id="divItemTabelaPontos1">
+				<div class ="divNomeItemTabelaPontos">Quantidade</div>
+				<div class ="divNumerosItemTabelaPontos"><span id="item1_num">0</span>/<span id="item1_max">300</span></div>
+			</div>
+			<div class="divItemTabelaPontos" id="divItemTabelaPontos2">
+				<div class ="divNomeItemTabelaPontos">Usando</div>
+				<div class ="divNumerosItemTabelaPontos"><span id="item2_num">0</span>/<span id="item2_max">0</span></div>
+			</div>
+		</div>
+	</div>
 	<div class="divListaTabelaPontos" id="ferramentasTPDiv">
 		<p class ="redutorTabelaPontos" id="redutorTPontosFerramentas">▼Ferramentas</p>
 		<div id="infosFerramentas">
@@ -457,6 +484,9 @@ document.getElementById("redutorNpcCentro").onclick = function() {interruptorBot
 document.getElementById("redutorTPontosFerramentas").onclick = function() {interruptorBotao('infosFerramentas',6)};
 document.getElementById("redutorTPontosItens").onclick = function() {interruptorBotao('infosItens',7)};
 document.getElementById("redutorTPontosRespeito").onclick = function() {interruptorBotao('infosRespeito',8)};
+document.getElementById("redutorTPontosTitulo1").onclick = function() {interruptorBotao('infosTitulo1',9)};
+
+document.getElementById("textoTempoDeVidaTDiv").onclick = function() {botaoJogar()};
 
 var idBotao = ["rapidoColherMaca","rapidoCausarIntriga","loopTrabalhoNoCampo","loopComer","npcFazendeiro","npcMoca","npcSenhoraIdosa"];
 document.getElementById(idBotao[0]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[0],0)};
@@ -484,6 +514,37 @@ function interruptorBotao(grupoNpcs,indiceReduzido) {
         reduzido[indiceReduzido] = 0;
     }
 }
+
+function botaoJogar(){
+	let textoTempoDeVida = document.getElementById("textoTempoDeVidaTDiv");
+	let item1Num = document.getElementById("item1_num");
+	let item2Max = document.getElementById("item2_max");
+	textoTempoDeVida.style.animation = false;
+	
+    let tempoCapturado = Number(new Date()); 
+    var tempoTimer = 300; 
+  	var regressorTempo = setInterval(frame, 10);
+  
+	function frame() {
+		let tempoAgora = Number(new Date());
+		let contagemRegresiva = tempoTimer+Math.trunc((tempoCapturado-tempoAgora)/1000);
+    
+		let mins = Math.trunc(contagemRegresiva / 60);
+		let segs = contagemRegresiva % 60;
+		mins = mins < 10 ? "0" + mins : mins;
+		segs = segs < 10 ? "0" + segs : segs;
+    
+		if (contagemRegresiva <= 0) {
+			textoTempoDeVida.textContent ="Fim";
+			clearInterval(regressorTempo);
+		} else {
+			textoTempoDeVida.textContent = mins+":"+segs;
+			item1Num.textContent = contagemRegresiva;
+			item2Max.textContent = contagemRegresiva;
+		}
+	}
+}
+
 function mouseEntraSaiBotao(idBotao,entraSai) {
 	if(!entraSai){
 		document.getElementById(idBotao).style.background = "#eaeaea";
