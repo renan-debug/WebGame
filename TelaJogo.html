@@ -5,6 +5,12 @@ body{
 	font-family:Verdana, sans-serif;
 	cursor: default;
 }
+.indicadorPosicaoFila{
+			transform: scale(0.5,0.5);
+			position:fixed;
+			z-index: 1;
+			font-weight: bold;
+}
 #topoDiv {
   width: 1200px;
   height: 60px;
@@ -127,12 +133,12 @@ body{
 		margin-bottom: 2px;
 	}
 	.redutorListaBotoes {
-		display: block;
 		margin-top: 0px;
 		margin-bottom: 0px;
 		font-style: italic;
 	}
 	.botaoPrincipalDiv {
+		display: inline-block;
 		border-style: solid;
 		border-width: 1px;
 		display: block;
@@ -140,6 +146,25 @@ body{
 		margin-bottom: 1px;
 		text-align: center;
 	}
+		/*.posicaoFilaListaBotoes {
+			display: inline-block;
+			border-width: 1px;
+			color: white;
+			background-color: #787878;
+			transform: scale(0.8,0.8);
+		}
+			#posicaoBotao1{
+				display: none;
+			}
+			#posicaoBotao2{
+				display: none;
+			}
+			#posicaoBotao3{
+				display: none;
+			}
+			#posicaoBotao4{
+				display: none;
+			}*/
 	#opcoesAreaPDiv {
 	  width: 248px;
 	  height: 368px;
@@ -155,6 +180,7 @@ body{
 	  background-color: #eaeaea;
 	  margin-left: 251px;
 	  margin-right: 1px;
+	  overflow: auto;
 	}
 	#opcoesAcoesLoopPDiv {
 	  width: 248px;
@@ -163,6 +189,7 @@ body{
 	  background-color: #eaeaea;
 	  margin-left: 501px;
 	  margin-right: 1px;
+	  overflow: auto;
 	}
 	#opcoesNpcsPDiv {
 	  width: 248px;
@@ -171,6 +198,7 @@ body{
 	  background-color: #eaeaea;
 	  margin-left: 751px;
 	  margin-right: 1px;
+	  overflow: auto;
 	}	
 #tabelasPontosDiv {
   width: 198px;
@@ -222,19 +250,49 @@ body{
 		.numeroLinhaFila {
 			width: 26px;
 			display: inline-block;
+			//display: none;
 			color: white;
 			border-style:solid;
 			border-width: 0px 0px 2px 0px;
 			border-color: white;
 			background-color: #787878;
+			text-align: center;
 		}
 		.textoLinhaFila {
 			width: 195px;
 			display: inline-block;
+			//display: none;
 			border-style:solid;
 			border-width: 0px 2px 2px 2px;
 			border-color: white;
 			text-align: center;
+		}
+		#posicao1Fila{
+			display:none;
+		}
+		#posicao2Fila{
+			display:none;
+		}
+		#posicao3Fila{
+			display:none;
+		}
+		#posicao4Fila{
+			display:none;
+		}
+		#posicao5Fila{
+			display:none;
+		}
+		#posicao6Fila{
+			display:none;
+		}
+		#posicao7Fila{
+			display:none;
+		}
+		#posicao8Fila{
+			display:none;
+		}
+		#posicao9Fila{
+			display:none;
 		}
 	#DescricaoIDiv {
 	  width: 748px;
@@ -251,38 +309,56 @@ body{
 			height: 100px;
 			position: fixed;
 			background-color: #787878;
+			display: none;
 		}
 			#tituloDIDiv {
-			font-size: 14px;
-			font-weight: bold;
+				font-size: 14px;
+				font-weight: bold;
 			}
-		.custoDIDiv {
+			#descricaoDIDiv {
+				color: #c3c3c3;
+			}
+		#custoDIDiv {
 			width: 164px;
 			height: 100px;
 			position: fixed;
 			background-color: #787878;
 			margin-left: 250px;
+			display: none;
 		}
-		.efeitoDIDiv{
+		#efeitoDIDiv{
 			width: 164px;
 			height: 100px;
 			position: fixed;
 			background-color: #787878;
 			margin-left: 416px;
+			display: none;
 		}
-		.futuroDIDiv{
+		#futuroDIDiv{
 			width: 164px;
 			height: 100px;
 			position: fixed;
 			background-color: #787878;
 			margin-left: 582px;
+			display: none;
 		}
 			.tituloCustoEfeitoFuturoDIDIV {
-			font-weight: bold;
+				font-weight: bold;
+			}
+			.textoCustoEfeitoFuturoDIDIV {
+				color: #c3c3c3;
 			}
 </style>
 <body>
-
+<div class="indicadorPosicaoFila" id="indicadorPosicaoFila1">1</div>
+<div class="indicadorPosicaoFila" id="indicadorPosicaoFila2">2</div>
+<div class="indicadorPosicaoFila" id="indicadorPosicaoFila3">3</div>
+<div class="indicadorPosicaoFila" id="indicadorPosicaoFila4">4</div>
+<div class="indicadorPosicaoFila" id="indicadorPosicaoFila5">5</div>
+<div class="indicadorPosicaoFila" id="indicadorPosicaoFila6">6</div>
+<div class="indicadorPosicaoFila" id="indicadorPosicaoFila7">7</div>
+<div class="indicadorPosicaoFila" id="indicadorPosicaoFila8">8</div>
+<div class="indicadorPosicaoFila" id="indicadorPosicaoFila9">9</div>
 <div id="topoDiv">
 	<div id="nomeLugarTDiv"><p class="textoTopo" id="textoNomeLugarTDiv">Aldeia</p></div>
 	<div id="descricaoLugarTDiv"><p class="textoTopo" id="textoDescricaoLugarTDiv">Pequena aldeia habitada por duas famílias.</p></div>
@@ -304,7 +380,12 @@ body{
 		<div class="divListaBotoes" id="rapidaAtividade">
 			<p class ="redutorListaBotoes" id="redutorRapidaAtividade">▼Atividade</p>
 			<div id="botoesAtividade">
-				<p class="botaoPrincipalDiv" id="rapidoColherMaca" onclick="conta('maca_cont', 10)">Colher Maça</p>
+				<div class="botaoPrincipalDiv" id="rapidoColherMaca" onclick="conta('maca_cont', 10)">Colher Maça
+					<!--<div class="posicaoFilaListaBotoes" id="posicaoBotao1">1</div>
+					<div class="posicaoFilaListaBotoes" id="posicaoBotao2">2</div>
+					<div class="posicaoFilaListaBotoes" id="posicaoBotao3">3</div>
+					<div class="posicaoFilaListaBotoes" id="posicaoBotao4">4</div>-->
+				</div>
 			</div>
 		</div>
 		<div class="divListaBotoes" id="rapidoSocial">
@@ -413,63 +494,58 @@ body{
 <div id="inferiorDiv">
 	<div id="filaIDiv">
 		<div id="posicao1Fila">
-			<div class="numeroLinhaFila">01.</div>
-			<div class="textoLinhaFila">Comprar Feijoada</div>
+			<div class="numeroLinhaFila">1</div>
+			<div class="textoLinhaFila" id="textoLinhaFila1"></div>
 		</div>
 		<div id="posicao2Fila">
-			<div class="numeroLinhaFila">02.</div>
-			<div class="textoLinhaFila">Abençoar Traficantes</div>
+			<div class="numeroLinhaFila">2</div>
+			<div class="textoLinhaFila" id="textoLinhaFila2"></div>
 		</div>
 		<div id="posicao3Fila">
-			<div class="numeroLinhaFila">03.</div>
-			<div class="textoLinhaFila">Sabedoria Alienígena</div>
+			<div class="numeroLinhaFila">3</div>
+			<div class="textoLinhaFila" id="textoLinhaFila3"></div>
 		</div>
 		<div id="posicao4Fila">
-			<div class="numeroLinhaFila">04.</div>
-			<div class="textoLinhaFila">Dormir</div>
+			<div class="numeroLinhaFila">4</div>
+			<div class="textoLinhaFila" id="textoLinhaFila4"></div>
 		</div>
 		<div id="posicao5Fila">
-			<div class="numeroLinhaFila">05.</div>
-			<div class="textoLinhaFila">Ler</div>
+			<div class="numeroLinhaFila">5</div>
+			<div class="textoLinhaFila" id="textoLinhaFila5"></div>
 		</div>
 		<div id="posicao6Fila">
-			<div class="numeroLinhaFila">06.</div>
-			<div class="textoLinhaFila">Ouvir BackStreetBooks</div>
+			<div class="numeroLinhaFila">6</div>
+			<div class="textoLinhaFila" id="textoLinhaFila6"></div>
 		</div>
 		<div id="posicao7Fila">
-			<div class="numeroLinhaFila">07.</div>
-			<div class="textoLinhaFila">Taberu</div>
+			<div class="numeroLinhaFila">7</div>
+			<div class="textoLinhaFila" id="textoLinhaFila7"></div>
 		</div>
 		<div id="posicao8Fila">
-			<div class="numeroLinhaFila">08.</div>
-			<div class="textoLinhaFila">Miru</div>
+			<div class="numeroLinhaFila">8</div>
+			<div class="textoLinhaFila" id="textoLinhaFila8"></div>
 		</div>
 		<div id="posicao9Fila">
-			<div class="numeroLinhaFila">09.</div>
-			<div class="textoLinhaFila">Viver</div>
+			<div class="numeroLinhaFila">9</div>
+			<div class="textoLinhaFila" id="textoLinhaFila9"></div>
 		</div>
 	</div>
 	<div id="DescricaoIDiv">
 		<div id="tituloDescricaoDIDiv">
-			<div id="tituloDIDiv">Campo</div>
-			<div id="descricaoDIDiv">Era uma vez
-Um lugarzinho no meio do nada
-Com sabor de chocolate
-E cheiro de terra molhada
-Era uma vez
-A riqueza contra a simplicidade...</div>
+			<div id="tituloDIDiv"></div>
+			<div id="descricaoDIDiv"></div>
 		</div>
-		<div class="custoDIDiv">
-			<div class="tituloCustoEfeitoFuturoDIDIV">Custo:</div>
-			<div class="textoCustoEfeitoFuturoDIDIV">-1 enxada (8/8)</div>
+		<div id="custoDIDiv">
+			<div class="tituloCustoEfeitoFuturoDIDIV" id="tituloCustoDIDIV"></div>
+			<div class="textoCustoEfeitoFuturoDIDIV" id="textoCustoDIDIV"></div>
 		</div>
-		<div class="efeitoDIDiv">
-			<div class="tituloCustoEfeitoFuturoDIDIV">Efeito:</div>
-			<div class="textoCustoEfeitoFuturoDIDIV">+1 comida (0/0)</div>
+		<div id="efeitoDIDiv">
+			<div class="tituloCustoEfeitoFuturoDIDIV" id="tituloEfeitoDIDIV"></div>
+			<div class="textoCustoEfeitoFuturoDIDIV" id="textoEfeitoDIDIV"></div>
 		</div>
-		<div class="futuroDIDiv">
-			<div class="tituloCustoEfeitoFuturoDIDIV">Futuro:</div>
-			<div class="textoCustoEfeitoFuturoDIDIV">+1 comida (0/0)</div>
+		<div id="futuroDIDiv">
+			<div class="tituloCustoEfeitoFuturoDIDIV" id="tituloFuturoDIDIV"></div>
+			<div class="textoCustoEfeitoFuturoDIDIV" id="textoFuturoDIDIV"></div>
 		</div>
 	</div>
 </div>
@@ -493,8 +569,8 @@ document.getElementById(idBotao[0]).onmouseenter = function() {mouseEntraSaiBota
 document.getElementById(idBotao[0]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[0],1)};
 document.getElementById(idBotao[1]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[1],0)};
 document.getElementById(idBotao[1]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[1],1)};
-document.getElementById(idBotao[2]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[2],0)};
-document.getElementById(idBotao[2]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[2],1)};
+document.getElementById(idBotao[2]).onmouseenter = function() {controlDescricao(0,0), mouseEntraSaiBotao(idBotao[2],0)};
+document.getElementById(idBotao[2]).onmouseleave = function() {controlDescricao(1), mouseEntraSaiBotao(idBotao[2],1)};
 document.getElementById(idBotao[3]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[3],0)};
 document.getElementById(idBotao[3]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[3],1)};
 document.getElementById(idBotao[4]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[4],0)};
@@ -503,6 +579,14 @@ document.getElementById(idBotao[5]).onmouseenter = function() {mouseEntraSaiBota
 document.getElementById(idBotao[5]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[5],1)};
 document.getElementById(idBotao[6]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[6],0)};
 document.getElementById(idBotao[6]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[6],1)};
+
+document.getElementById(idBotao[0]).onclick = function() {botaoAcao(idBotao[0])};
+document.getElementById(idBotao[1]).onclick = function() {botaoAcao(idBotao[1])};
+document.getElementById(idBotao[2]).onclick = function() {botaoAcao(idBotao[2])};
+document.getElementById(idBotao[3]).onclick = function() {botaoAcao(idBotao[3])};
+document.getElementById(idBotao[4]).onclick = function() {botaoAcao(idBotao[4])};
+document.getElementById(idBotao[5]).onclick = function() {botaoAcao(idBotao[5])};
+document.getElementById(idBotao[6]).onclick = function() {botaoAcao(idBotao[6])};
 
 function interruptorBotao(grupoNpcs,indiceReduzido) {
     if (!reduzido[indiceReduzido]) {
@@ -553,6 +637,46 @@ function mouseEntraSaiBotao(idBotao,entraSai) {
 	}
 }
 
+function controlDescricao(on,indice) {
+	if(on==0){
+		var descricao = [
+			["Ladeira","Vai de bike sem freio.","Custo:","-1 Bike","Efeito:","+1 Fratura","Futuro:","80% de viralizar."]
+		];
+		document.getElementById("tituloDIDiv").textContent = descricao[indice][0];
+		document.getElementById("descricaoDIDiv").textContent = descricao[indice][1];
+		document.getElementById("tituloCustoDIDIV").textContent = descricao[indice][2];
+		document.getElementById("textoCustoDIDIV").textContent = descricao[indice][3];
+		document.getElementById("tituloEfeitoDIDIV").textContent = descricao[indice][4];
+		document.getElementById("textoEfeitoDIDIV").textContent = descricao[indice][5];
+		document.getElementById("tituloFuturoDIDIV").textContent = descricao[indice][6];
+		document.getElementById("textoFuturoDIDIV").textContent = descricao[indice][7];
+		
+		document.getElementById("tituloDescricaoDIDiv").style.display = "block";
+		document.getElementById("custoDIDiv").style.display = "block";
+		document.getElementById("efeitoDIDiv").style.display = "block";
+		document.getElementById("futuroDIDiv").style.display = "block";
+	}else{
+		document.getElementById("tituloDescricaoDIDiv").style.display = "none";
+		document.getElementById("custoDIDiv").style.display = "none";
+		document.getElementById("efeitoDIDiv").style.display = "none";
+		document.getElementById("futuroDIDiv").style.display = "none";
+	}
+}
+var filaEmUso =0;
+function botaoAcao(idBotao) {
+	if(filaEmUso<=9){
+		var a = filaEmUso+1;
+		var b="textoLinhaFila" + a;
+		var c= "posicao"+a+"Fila";
+		var d= "indicadorPosicaoFila"+a;
+		document.getElementById(b).textContent = document.getElementById(idBotao).textContent;
+		document.getElementById(c).style.display = "block";
+		filaEmUso++;
+		
+		document.getElementById(d).style.marginLeft = document.getElementById(idBotao).getBoundingClientRect().x-12+6*a+"px";
+		document.getElementById(d).style.marginTop = document.getElementById(idBotao).getBoundingClientRect().y-10+"px";
+	}
+}
 //contador da maçã
 
 var cont = 0;
