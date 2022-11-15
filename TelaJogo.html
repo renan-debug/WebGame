@@ -5,12 +5,12 @@ body{
 	font-family:Verdana, sans-serif;
 	cursor: default;
 }
-.indicadorPosicaoFila{
+/*.indicadorPosicaoFila{
 			transform: scale(0.5,0.5);
 			position:fixed;
 			z-index: 1;
 			font-weight: bold;
-}
+}*/
 #topoDiv {
   width: 1200px;
   height: 60px;
@@ -119,6 +119,7 @@ body{
 		background-color: white;
 		margin-top: 2px;
 		margin-bottom: 2px;
+		//display: none;
 	}
 		.textBotoesArea {
 			margin-top: 0px;
@@ -131,6 +132,7 @@ body{
 		background-color: white;
 		margin-top: 2px;
 		margin-bottom: 2px;
+		//display:none;
 	}
 	.redutorListaBotoes {
 		margin-top: 0px;
@@ -138,7 +140,7 @@ body{
 		font-style: italic;
 	}
 	.botaoPrincipalDiv {
-		display: inline-block;
+		//display: inline-block;
 		border-style: solid;
 		border-width: 1px;
 		display: block;
@@ -146,17 +148,27 @@ body{
 		margin-bottom: 1px;
 		text-align: center;
 	}
-		/*.posicaoFilaListaBotoes {
+		.tituloBotaoPrincipalDiv {
 			display: inline-block;
-			border-width: 1px;
-			color: white;
-			background-color: #787878;
-			transform: scale(0.8,0.8);
 		}
-			#posicaoBotao1{
+		.naFilaBotao {
+			display: none;
+			//border-width: 1px;
+			//color: white;
+			//background-color: #787878;
+			transform: scale(1,1.1);
+			font-weight: bold;
+		}
+			/*#naFilaBotao0{
 				display: none;
 			}
-			#posicaoBotao2{
+			#naFilaBotao1{
+				display: none;
+			}
+			#naFilaBotao2{
+				display: none;
+			}
+			/*#posicaoBotao2{
 				display: none;
 			}
 			#posicaoBotao3{
@@ -247,6 +259,9 @@ body{
 	  background-color: #eaeaea;
 	  overflow: auto;
 	}
+		.elementosFila {
+		display: none;
+		}
 		.numeroLinhaFila {
 			width: 26px;
 			display: inline-block;
@@ -258,7 +273,7 @@ body{
 			background-color: #787878;
 			text-align: center;
 		}
-		.textoLinhaFila {
+		.textoTimerLinhaFila {
 			width: 195px;
 			display: inline-block;
 			//display: none;
@@ -266,11 +281,34 @@ body{
 			border-width: 0px 2px 2px 2px;
 			border-color: white;
 			text-align: center;
+			//color: white;
 		}
-		#posicao1Fila{
+			.textoLinhaFila {
+				//position: absolute;
+				//border-style: solid;
+				//width: 2000px;
+				display: inline-block;
+				width: 68.5%;
+				//background-color: black;
+			}
+			#timerLinhaFila {
+				//position: absolute;
+				//border-style: solid;
+				//width: 2000px;
+				width: 28.5%;
+				//z-index = 1;
+				display: inline-block;
+				//background-color: green;
+			}
+			#timerLinhaFilaProgress{
+				width: 0%;
+				height: 13px;
+				background-color: green;
+			}
+		/*#posicao1Fila{
 			display:none;
 		}
-		#posicao2Fila{
+		/*#posicao2Fila{
 			display:none;
 		}
 		#posicao3Fila{
@@ -293,7 +331,7 @@ body{
 		}
 		#posicao9Fila{
 			display:none;
-		}
+		}*/
 	#DescricaoIDiv {
 	  width: 748px;
 	  height: 100px;
@@ -350,7 +388,7 @@ body{
 			}
 </style>
 <body>
-<div class="indicadorPosicaoFila" id="indicadorPosicaoFila1">1</div>
+<!--<div class="indicadorPosicaoFila" id="indicadorPosicaoFila1">1</div>
 <div class="indicadorPosicaoFila" id="indicadorPosicaoFila2">2</div>
 <div class="indicadorPosicaoFila" id="indicadorPosicaoFila3">3</div>
 <div class="indicadorPosicaoFila" id="indicadorPosicaoFila4">4</div>
@@ -358,7 +396,7 @@ body{
 <div class="indicadorPosicaoFila" id="indicadorPosicaoFila6">6</div>
 <div class="indicadorPosicaoFila" id="indicadorPosicaoFila7">7</div>
 <div class="indicadorPosicaoFila" id="indicadorPosicaoFila8">8</div>
-<div class="indicadorPosicaoFila" id="indicadorPosicaoFila9">9</div>
+<div class="indicadorPosicaoFila" id="indicadorPosicaoFila9">9</div>-->
 <div id="topoDiv">
 	<div id="nomeLugarTDiv"><p class="textoTopo" id="textoNomeLugarTDiv">Aldeia</p></div>
 	<div id="descricaoLugarTDiv"><p class="textoTopo" id="textoDescricaoLugarTDiv">Pequena aldeia habitada por duas famílias.</p></div>
@@ -380,9 +418,10 @@ body{
 		<div class="divListaBotoes" id="rapidaAtividade">
 			<p class ="redutorListaBotoes" id="redutorRapidaAtividade">▼Atividade</p>
 			<div id="botoesAtividade">
-				<div class="botaoPrincipalDiv" id="rapidoColherMaca" onclick="conta('maca_cont', 10)">Colher Maça
-					<!--<div class="posicaoFilaListaBotoes" id="posicaoBotao1">1</div>
-					<div class="posicaoFilaListaBotoes" id="posicaoBotao2">2</div>
+				<div class="botaoPrincipalDiv" id="rapidoColherMaca" onclick="conta('maca_cont', 10)">
+					<div class="tituloBotaoPrincipalDiv" id="titulorapidoColherMaca">Colher Maça</div>
+					<div class="naFilaBotao" id="naFilaBotao0">■</div>
+					<!--<div class="posicaoFilaListaBotoes" id="posicaoBotao2">2</div>
 					<div class="posicaoFilaListaBotoes" id="posicaoBotao3">3</div>
 					<div class="posicaoFilaListaBotoes" id="posicaoBotao4">4</div>-->
 				</div>
@@ -391,7 +430,10 @@ body{
 		<div class="divListaBotoes" id="rapidoSocial">
 			<p class ="redutorListaBotoes" id="redutorRapidoSocial">▼Social</p>
 			<div id="botoesSocial">
-				<p class="botaoPrincipalDiv" id="rapidoCausarIntriga" onclick="contaMenos('geral_cont')">Causar Intriga</p>
+				<div class="botaoPrincipalDiv" id="rapidoCausarIntriga" onclick="contaMenos('geral_cont')">
+					<div class="tituloBotaoPrincipalDiv" id="titulorapidoCausarIntriga">Causar Intriga</div>
+					<div class="naFilaBotao" id="naFilaBotao1">■</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -399,13 +441,19 @@ body{
 		<div class="divListaBotoes" id="loopTrabalho">
 			<p class ="redutorListaBotoes" id="redutorLoopTrabalho">▼Trabalho</p>
 			<div id="botoesTrabalho">
-				<p class="botaoPrincipalDiv" id="loopTrabalhoNoCampo">Campo</p>
+				<div class="botaoPrincipalDiv" id="loopTrabalhoNoCampo">
+					<div class="tituloBotaoPrincipalDiv" id="tituloloopTrabalhoNoCampo">Campo</div>
+					<div class="naFilaBotao" id="naFilaBotao2">■</div>
+				</div>
 			</div>
 		</div>
 		<div class="divListaBotoes" id="loopRestaurador">
 			<p class ="redutorListaBotoes" id="redutorLoopRestaurador">▼Restaurador</p>
 			<div id="botoesRestaurador">
-				<p class="botaoPrincipalDiv" id="loopComer">Comer</p>
+				<div class="botaoPrincipalDiv" id="loopComer">
+					<div class="tituloBotaoPrincipalDiv" id="tituloloopComer">Comer</div>
+					<div class="naFilaBotao" id="naFilaBotao3">■</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -413,14 +461,23 @@ body{
 		<div class="divListaBotoes" id="areaNpcFazenda">
 			<p class ="redutorListaBotoes" id="redutorNpcFazenda">▼Fazenda</p>
 			<div id="botoesFazenda">
-				<p class="botaoPrincipalDiv" id="npcFazendeiro">Fazendeiro</p>
-				<p class="botaoPrincipalDiv" id="npcMoca">Moça</p>
+				<div class="botaoPrincipalDiv" id="npcFazendeiro">
+					<div class="tituloBotaoPrincipalDiv" id="titulonpcFazendeiro">Fazendeiro</div>
+					<div class="naFilaBotao" id="naFilaBotao4">■</div>
+				</div>
+				<div class="botaoPrincipalDiv" id="npcMoca">
+					<div class="tituloBotaoPrincipalDiv" id="titulonpcMoca">Moça</div>
+					<div class="naFilaBotao" id="naFilaBotao5">■</div>
+				</div>
 			</div>
 		</div>
 		<div class="divListaBotoes" id="areaNpcCentro">
 			<p class ="redutorListaBotoes" id="redutorNpcCentro">▼Centro</p>
 			<div id="botoesCentro">
-			<p class="botaoPrincipalDiv" id="npcSenhoraIdosa">Senhora Idosa</p>
+				<div class="botaoPrincipalDiv" id="npcSenhoraIdosa">
+					<div class="tituloBotaoPrincipalDiv" id="titulonpcSenhoraIdosa">Senhora Idosa</div>
+					<div class="naFilaBotao" id="naFilaBotao6">■</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -493,41 +550,60 @@ body{
 </div>
 <div id="inferiorDiv">
 	<div id="filaIDiv">
-		<div id="posicao1Fila">
+		<div class="elementosFila" id="posicao1Fila">
 			<div class="numeroLinhaFila">1</div>
-			<div class="textoLinhaFila" id="textoLinhaFila1"></div>
+			<div class="textoTimerLinhaFila">
+				<div class="textoLinhaFila" id="textoLinhaFila1"></div>
+				<div id="timerLinhaFila"><div id="timerLinhaFilaProgress"></div></div>
+			</div>
 		</div>
-		<div id="posicao2Fila">
+		<div class="elementosFila" id="posicao2Fila">
 			<div class="numeroLinhaFila">2</div>
-			<div class="textoLinhaFila" id="textoLinhaFila2"></div>
+			<div class="textoTimerLinhaFila">
+				<div class="textoLinhaFila" id="textoLinhaFila2"></div>
+			</div>
 		</div>
-		<div id="posicao3Fila">
+		<div class="elementosFila" id="posicao3Fila">
 			<div class="numeroLinhaFila">3</div>
-			<div class="textoLinhaFila" id="textoLinhaFila3"></div>
+			<div class="textoTimerLinhaFila">
+				<div class="textoLinhaFila" id="textoLinhaFila3"></div>
+			</div>
 		</div>
-		<div id="posicao4Fila">
+		<div class="elementosFila" id="posicao4Fila">
 			<div class="numeroLinhaFila">4</div>
-			<div class="textoLinhaFila" id="textoLinhaFila4"></div>
+			<div class="textoTimerLinhaFila">
+				<div class="textoLinhaFila" id="textoLinhaFila4"></div>
+			</div>
 		</div>
-		<div id="posicao5Fila">
+		<div class="elementosFila" id="posicao5Fila">
 			<div class="numeroLinhaFila">5</div>
-			<div class="textoLinhaFila" id="textoLinhaFila5"></div>
+			<div class="textoTimerLinhaFila">
+				<div class="textoLinhaFila" id="textoLinhaFila5"></div>
+			</div>
 		</div>
-		<div id="posicao6Fila">
+		<div class="elementosFila" id="posicao6Fila">
 			<div class="numeroLinhaFila">6</div>
-			<div class="textoLinhaFila" id="textoLinhaFila6"></div>
+			<div class="textoTimerLinhaFila">
+				<div class="textoLinhaFila" id="textoLinhaFila6"></div>
+			</div>
 		</div>
-		<div id="posicao7Fila">
+		<div class="elementosFila" id="posicao7Fila">
 			<div class="numeroLinhaFila">7</div>
-			<div class="textoLinhaFila" id="textoLinhaFila7"></div>
+			<div class="textoTimerLinhaFila">
+				<div class="textoLinhaFila" id="textoLinhaFila7"></div>
+			</div>
 		</div>
-		<div id="posicao8Fila">
+		<div class="elementosFila" id="posicao8Fila">
 			<div class="numeroLinhaFila">8</div>
-			<div class="textoLinhaFila" id="textoLinhaFila8"></div>
+			<div class="textoTimerLinhaFila">
+				<div class="textoLinhaFila" id="textoLinhaFila8"></div>
+			</div>
 		</div>
-		<div id="posicao9Fila">
+		<div class="elementosFila" id="posicao9Fila">
 			<div class="numeroLinhaFila">9</div>
-			<div class="textoLinhaFila" id="textoLinhaFila9"></div>
+			<div class="textoTimerLinhaFila">
+				<div class="textoLinhaFila" id="textoLinhaFila9"></div>
+			</div>
 		</div>
 	</div>
 	<div id="DescricaoIDiv">
@@ -580,13 +656,13 @@ document.getElementById(idBotao[5]).onmouseleave = function() {mouseEntraSaiBota
 document.getElementById(idBotao[6]).onmouseenter = function() {mouseEntraSaiBotao(idBotao[6],0)};
 document.getElementById(idBotao[6]).onmouseleave = function() {mouseEntraSaiBotao(idBotao[6],1)};
 
-document.getElementById(idBotao[0]).onclick = function() {botaoAcao(idBotao[0])};
-document.getElementById(idBotao[1]).onclick = function() {botaoAcao(idBotao[1])};
-document.getElementById(idBotao[2]).onclick = function() {botaoAcao(idBotao[2])};
-document.getElementById(idBotao[3]).onclick = function() {botaoAcao(idBotao[3])};
-document.getElementById(idBotao[4]).onclick = function() {botaoAcao(idBotao[4])};
-document.getElementById(idBotao[5]).onclick = function() {botaoAcao(idBotao[5])};
-document.getElementById(idBotao[6]).onclick = function() {botaoAcao(idBotao[6])};
+document.getElementById(idBotao[0]).onclick = function() {botaoAcao(idBotao[0],0)};
+document.getElementById(idBotao[1]).onclick = function() {botaoAcao(idBotao[1],1)};
+document.getElementById(idBotao[2]).onclick = function() {botaoAcao(idBotao[2],2)};
+document.getElementById(idBotao[3]).onclick = function() {botaoAcao(idBotao[3],3)};
+document.getElementById(idBotao[4]).onclick = function() {botaoAcao(idBotao[4],4)};
+document.getElementById(idBotao[5]).onclick = function() {botaoAcao(idBotao[5],5)};
+document.getElementById(idBotao[6]).onclick = function() {botaoAcao(idBotao[6],6)};
 
 function interruptorBotao(grupoNpcs,indiceReduzido) {
     if (!reduzido[indiceReduzido]) {
@@ -663,18 +739,72 @@ function controlDescricao(on,indice) {
 	}
 }
 var filaEmUso =0;
-function botaoAcao(idBotao) {
+var a;
+var b;
+var c;
+var d;
+var e;
+var h = [];
+function botaoAcao(idBotao,indiceBotao) {
 	if(filaEmUso<=9){
-		var a = filaEmUso+1;
-		var b="textoLinhaFila" + a;
-		var c= "posicao"+a+"Fila";
-		var d= "indicadorPosicaoFila"+a;
-		document.getElementById(b).textContent = document.getElementById(idBotao).textContent;
+		a = filaEmUso+1;
+		b= "textoLinhaFila" + a;
+		c= "posicao"+a+"Fila";
+		d= "titulo"+idBotao;
+		e= "naFilaBotao"+indiceBotao;
+		h.push(indiceBotao);
+		//var d= "indicadorPosicaoFila"+a;
+		document.getElementById(b).textContent = document.getElementById(d).textContent;
 		document.getElementById(c).style.display = "block";
+		document.getElementById(e).style.display = "inline-block";
 		filaEmUso++;
-		
-		document.getElementById(d).style.marginLeft = document.getElementById(idBotao).getBoundingClientRect().x-12+6*a+"px";
-		document.getElementById(d).style.marginTop = document.getElementById(idBotao).getBoundingClientRect().y-10+"px";
+		if(a==1){
+			progressoAcao();
+		}
+		//document.getElementById
+		//document.getElementById(d).style.marginLeft = document.getElementById(idBotao).getBoundingClientRect().x-12+6*a+"px";
+		//document.getElementById(d).style.marginTop = document.getElementById(idBotao).getBoundingClientRect().y-10+"px";
+	}
+}
+function progressoAcao() {
+	var timerProgress = document.getElementById("timerLinhaFilaProgress");
+	
+    let tempoCapturado = Number(new Date()); 
+    var tempoTimer = 10; 
+  	var regressorTempo = setInterval(frame, 10);
+  
+	function frame() {
+		let tempoAgora = Number(new Date());
+		let contagemRegresiva = tempoTimer*1000+tempoCapturado-tempoAgora;
+		let razaoTimer = 100-(contagemRegresiva/(tempoTimer*1000))*100;
+    
+		if (contagemRegresiva < -0.01) {
+			i = h.shift();
+			j = "naFilaBotao"+i;
+			
+			document.getElementById(j).style.display = "none";
+			
+			var contador = 0;
+			while(contador<=a){
+				var idTextoVelho = "textoLinhaFila"+(contador+1);
+				var idTextoNovo = "textoLinhaFila"+(contador+2);
+				document.getElementById(idTextoVelho).textContent = document.getElementById(idTextoNovo).textContent;
+				contador++;
+			}
+			filaEmUso--;
+			f=filaEmUso+1;
+			g= "posicao"+f+"Fila";
+			document.getElementById(g).style.display = "none";
+			if(document.getElementById("posicao1Fila").style.display != "none"){
+				progressoAcao();
+			}
+			clearInterval(regressorTempo);
+			
+		} else {
+			//width++;
+        	//timerProgress.style.width = width/tempoTimer + "%";
+			timerProgress.style.width = razaoTimer + "%";
+		}
 	}
 }
 //contador da maçã
